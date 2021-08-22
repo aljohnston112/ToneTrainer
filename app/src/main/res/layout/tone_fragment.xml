@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    <variable
+        name="toneViewModel"
+        type="com.fourthfinger.tonetrainer.ToneViewModel" />
+
+
+        <variable
+            name="toneFragment"
+            type="com.fourthfinger.tonetrainer.ToneFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_padding"
+            tools:context=".ui.game.GameFragment">
+
+            <Button
+                android:id="@+id/play"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginEnd="@dimen/default_padding"
+                android:text="@string/play"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fSharp" />
+
+
+            <TextView
+                android:id="@+id/textView_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:text="@string/instructions"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+                app:layout_constraintBottom_toTopOf="@id/a"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/word_count" />
+
+            <Button
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/a"
+                app:layout_constraintEnd_toStartOf="@+id/aSharp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_instructions"
+                android:onClick="@{()->toneFragment.checkTone(@string/a)}"/>
+
+            <Button
+                android:id="@+id/aSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/aSharp"
+                app:layout_constraintBaseline_toBaselineOf="@id/a"
+                app:layout_constraintEnd_toStartOf="@+id/b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/a"
+                android:onClick="@{()->toneFragment.checkTone(@string/aSharp)}"/>
+
+            <Button
+                android:id="@+id/b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/b"
+                app:layout_constraintBaseline_toBaselineOf="@id/a"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/aSharp"
+                android:onClick="@{()->toneFragment.checkTone(@string/b)}"/>
+
+            <Button
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/c"
+                app:layout_constraintTop_toBottomOf="@id/a"
+                app:layout_constraintEnd_toStartOf="@+id/cSharp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                android:onClick="@{()->toneFragment.checkTone(@string/c)}"/>
+
+            <Button
+                android:id="@+id/cSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/cSharp"
+                app:layout_constraintBaseline_toBaselineOf="@id/c"
+                app:layout_constraintEnd_toStartOf="@+id/d"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/c"
+                android:onClick="@{()->toneFragment.checkTone(@string/cSharp)}"/>
+
+            <Button
+                android:id="@+id/d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/d"
+                app:layout_constraintBaseline_toBaselineOf="@id/c"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cSharp"
+                android:onClick="@{()->toneFragment.checkTone(@string/d)}"/>
+
+            <Button
+                android:id="@+id/dSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/dSharp"
+                app:layout_constraintEnd_toStartOf="@+id/e"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/c"
+                android:onClick="@{()->toneFragment.checkTone(@string/dSharp)}"/>
+
+            <Button
+                android:id="@+id/e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/e"
+                app:layout_constraintEnd_toStartOf="@+id/f"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dSharp"
+                app:layout_constraintBaseline_toBaselineOf="@id/dSharp"
+                android:onClick="@{()->toneFragment.checkTone(@string/e)}"/>
+
+            <Button
+                android:id="@+id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/e"
+                app:layout_constraintBaseline_toBaselineOf="@id/dSharp"
+                android:onClick="@{()->toneFragment.checkTone(@string/f)}"/>
+
+            <Button
+                android:id="@+id/fSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/fSharp"
+                app:layout_constraintEnd_toStartOf="@+id/g"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dSharp"
+                android:onClick="@{()->toneFragment.checkTone(@string/fSharp)}"/>
+
+            <Button
+                android:id="@+id/g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/g"
+                app:layout_constraintEnd_toStartOf="@+id/gSharp"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/fSharp"
+                app:layout_constraintBaseline_toBaselineOf="@id/fSharp"
+                android:onClick="@{()->toneFragment.checkTone(@string/g)}"/>
+
+
+            <Button
+                android:id="@+id/gSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/gSharp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/g"
+                app:layout_constraintBaseline_toBaselineOf="@id/fSharp"
+                android:onClick="@{()->toneFragment.checkTone(@string/gSharp)}"/>
+
+            <TextView
+                android:id="@+id/word_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/tone_count(toneViewModel.currentNoteCount)}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintBottom_toTopOf="@+id/textView_instructions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

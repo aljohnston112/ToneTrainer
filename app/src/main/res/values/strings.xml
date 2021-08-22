@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ToneTrainer</string>
+    <string name="poke_me">Poke me</string>
+    <string name="play">Play</string>
+    <string name="submit">Submit</string>
+    <string name="instructions">Guess the note</string>
+    <string name="tone_count">%d notes</string>
+    <string name="a">A</string>
+    <string name="aSharp">A#</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="cSharp">C#</string>
+    <string name="d">D</string>
+    <string name="dSharp">D#</string>
+    <string name="e">E</string>
+    <string name="f">F</string>
+    <string name="fSharp">F#</string>
+    <string name="g">G</string>
+    <string name="gSharp">G#</string>
+    <string name="try_again">Try again</string>
+
+</resources>
